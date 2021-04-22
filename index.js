@@ -6,7 +6,7 @@
 
 
 // TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 
 
 
@@ -29,39 +29,38 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'description',
-      message: 'Description',
+      message: 'Please describe the project.',
     },
     {
       type: 'input',
       name: 'installation',
-      message: 'installation:',
+      message: 'Please provide instructions for installation.',
     },
     {
       type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'use',
+      message: 'Please enter usage guidance.',
     },
     {
       type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
+      name: 'constribute',
+      message: 'Please enter your contribution guidelines.',
     },
     {
       type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+      name: 'test',
+      message: 'Please enter your testing protocols.',
     },
-
-    //The lines for the read me
     {
-        type: 'input',
-        name: 'hobby',
-        message: 'Project title?',
+      type: 'input',
+      name: 'license',
+      message: 'Which license would you like to use',
+      // I think this needs to be a choice
       },
-      {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email?',
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email?',
       },
       {
         type: 'input',
@@ -77,45 +76,44 @@ const promptUser = () => {
 };
 
 
-
-
-//test
-
-//test
-
 // Create a function to write README file
 
 
-
+//markdown file generation
 const generateMD = (answers) => {
-    return `# ${answers.projectTitle}
+    return `# ${answers.title}
       
   #### Table of Contents
   1. [Project Description](#project-description)
   2. [Installation Instructions](#installation-instructions)
   3. [Usage Information](#usage-information)
   4. [Contributor Guidelines](#contributor-guidelines)
-  5. [Code of Conduct](#code-of-conduct)
-  6. [Test Instructions](#test-instructions)
-  7. [License](#license)
-  8. [Questions](#questions)
+  5. [Test Instructions](#test-instructions)
+  6. [License](#license)
+  7. [Questions](#questions)
+
   ## Project Description
   * ${answers.description}
+
   ## Installation Instructions
-  * ${answers.install}
+  * ${answers.installation}
+
   ## Usage Information
   * ${answers.use}
+
   ## Contributor Guidelines
-  * ${answers.contributions}
-  ## Code of Conduct
+  * ${answers.contribute}
   * [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
+
   ## Test Instructions
   * ${answers.test}
+
   ## License
   * licensed under the ${answers.license}
+
   ## Questions
-  * For additional help or questions about collaboration, please reach out to ${answers.email}
-  * Follow me on Github at [${answers.github}](http://github.com/${answers.github})`;
+  * If you have any questions, please do not hesitate to reach out at ${answers.email} or ${answers.linkedin}.
+  * You can find  [${answers.github}](http://github.com/${answers.github})`;
     
   }
   
