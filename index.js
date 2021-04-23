@@ -31,7 +31,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'contribute',
-      message: 'Please enter your contribution guidelines.',
+      message: 'Please enter who contributed to this project or contributor guidelines.',
     },
     {
       type: 'input',
@@ -71,7 +71,7 @@ const generateMD = (answers) => {
   1. [Project Description](#project-description)
   2. [Installation Instructions](#installation-instructions)
   3. [Usage Information](#usage-information)
-  4. [Contributor Guidelines](#contributor-guidelines)
+  4. [Contributors](#contributors)
   5. [Test Instructions](#test-instructions)
   6. [License](#license)
   7. [Questions](#questions)
@@ -85,7 +85,7 @@ const generateMD = (answers) => {
   ## Usage Information
   * ${answers.use}
 
-  ## Contributor Guidelines
+  ## Contributors
   * ${answers.contribute}
   * [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
 
@@ -97,7 +97,7 @@ const generateMD = (answers) => {
 
   ## Questions
   * If you have any questions, please do not hesitate to reach out at ${answers.email} or ${answers.linkedin}.
-  * You can find  [${answers.github}](http://github.com/${answers.github})`;
+  * You can find me on GitHub at [${answers.github}](http://github.com/${answers.github})`;
     
   }
   
