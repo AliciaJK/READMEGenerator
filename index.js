@@ -1,16 +1,3 @@
-// TODO: Include packages needed for this application
-
-// TODO: Create an array of questions for user input
-//const questions = [];
-
-
-
-// TODO: Create a function to initialize app
-//function init() {}
-
-
-
-
 
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -43,7 +30,7 @@ const promptUser = () => {
     },
     {
       type: 'input',
-      name: 'constribute',
+      name: 'contribute',
       message: 'Please enter your contribution guidelines.',
     },
     {
@@ -74,9 +61,6 @@ const promptUser = () => {
       },
   ]);
 };
-
-
-// Create a function to write README file
 
 
 //markdown file generation
